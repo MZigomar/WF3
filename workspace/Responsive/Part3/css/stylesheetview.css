@@ -1,0 +1,49 @@
+#conteneur{
+    border: 2px solid;
+    margin: 0 auto;
+    width: 80%;
+    max-width: 1200px;
+    font-size: 1.2vw;
+}
+header{
+    background: #f6523f;
+    height: 15vh;
+}
+p{
+    margin: 0;
+}
+
+nav {
+    background: #665533;
+    height: 5vh;
+}
+
+section{
+    background: #f23f98;
+    margin: 2%;
+}
+
+footer{
+    background: #32f65f;
+    height: 7.5vh;
+}
+.a, .b, .c, .d{
+    float: left;
+    width: 50%;
+    height: 28vh;
+}
+.a{
+    background: #336699;
+}
+
+.b{
+    background: #767676;
+}
+    
+.c{
+    background: #fda500;
+}
+.d{
+    background: #aa2355;
+}
+.clear{ clear: both; }
