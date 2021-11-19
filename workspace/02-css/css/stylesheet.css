@@ -1,0 +1,27 @@
+h1 {
+    font-family: Arial, sans-serif;
+    font-style: italic;
+    text-align: center;
+    font-size: 72px;
+    background-color: #aecde6
+}
+p {
+    font-family: Arial, sans-serif;
+}
+/* .classes */
+.blue {
+    color: #4070e8;
+}
+.purple {
+    color: #8010a8;
+}
+.red {
+    color: #c82530;
+}
+.big{
+    font-size: 28px;
+}
+.bold{
+    font-weight: bold;
+}
+/* #id */

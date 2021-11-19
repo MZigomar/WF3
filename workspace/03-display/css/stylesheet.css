@@ -1,0 +1,84 @@
+body {
+    background-color: rgb(205, 205, 205);
+}
+header {
+    height: 63px;
+    padding: 3px;
+    width: 972px;
+    background-image: linear-gradient(white, rgb(255, 160, 40));;
+}
+nav {
+    padding: 3px;
+    width: 972px;
+    background-image: linear-gradient(white, rgb(0, 255, 255));
+}
+section {
+    padding-top: 15px;
+    padding-left: 3px;
+    width: 750px;
+    float: left;
+}
+article {
+    background-color: rgb(124, 168, 220);
+    padding: 3px;
+    min-height: 140px;
+}
+aside {
+    background-color: rgb(213, 153, 147);
+    padding: 3px;
+    float: left;
+}
+footer {
+    background-color: rgb(205, 206, 165);
+    padding: 3px;
+    min-height: 50px;
+    width: 972px;
+    position: absolute;
+    bottom: 0px;
+}
+
+.border {
+    border: 2px solid black;
+    margin: 7px;
+}
+.wrap {
+    margin: auto;
+    max-width: 1000px;
+}
+ul {
+    text-align: center;
+}
+ul#menu li {
+    display: inline;
+    clear: left;
+}
+nav p {
+    float: left;
+}
+.centerp {
+    text-align: center;
+}
+main {
+    width: 1000px;
+}
+main > aside {
+    height: 355px;
+    width: 200px;
+}
+h2 {
+    font-weight: normal;
+    font-size: 16px;
+    margin: 0px;
+}
+.floatl article {
+    float: left;
+    width: 552px;
+}
+.floatl aside {
+    float: left;
+    width: 150px;
+    height: 140px;
+}
+.clear {
+    clear: both;
+}
