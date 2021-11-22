@@ -1,0 +1,27 @@
+.w{
+    background: blanchedalmond;
+    grid-area: w;
+}
+.b{
+    background: rgb(0, 0, 0);
+    grid-area: b;
+}
+.container{
+    display: flex;
+    justify-content: space-around;
+}
+.grid div{
+    height: 100px;
+    width: 100px;
+    margin: 0px;
+}
+.grid{
+    border: rgb(165, 81, 42) 15px solid;
+    padding: 5px;
+    background: burlywood;
+    width: 800px;
+    height: 800px;
+    display: grid;
+    grid-template-areas:
+    "8 7 6 5 4 3 2 1";
+}
