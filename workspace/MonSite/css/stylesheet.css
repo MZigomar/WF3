@@ -74,7 +74,6 @@ body {
 }
 .card img:hover {
     object-fit: contain;
-    transform: scale(1.5);
 }
 
 .rezo {
@@ -125,6 +124,12 @@ body {
 #ig:hover {
     left: 180px;
     background: -120px -40px/700% url(../img/sprite.png);
+}
+
+.rezo a{
+    padding: 1px 20px 16px 20px;
+    text-decoration: none;
+    /* background-color: hotpink; */
 }
 
 footer {
