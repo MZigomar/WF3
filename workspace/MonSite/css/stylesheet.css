@@ -1,0 +1,136 @@
+body {
+    height: 100vh;
+}
+#logo {
+    height: 50px;
+    padding-left: 30px;
+}
+#pp {
+    height: 100px;
+    margin-bottom: 10px;
+}
+.carousel-inner img {
+    height: 550px;
+    object-fit: cover;
+}
+.progress {
+    margin: 10px;
+}
+.progress-bar {
+    font-weight: bold;
+}
+.container {
+    padding: 5px;
+}
+.portfolio img {
+    object-fit: contain;
+}
+.contact {
+    display: flex;
+    justify-content: center;
+    padding: 25px;
+}
+.contact a {
+    min-width: 150px;
+    width: 296px;
+    height: 50px;
+    align-self: center;
+    text-align: center;
+    padding: 7px 15px;
+    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border: 2px solid royalblue;
+    background-color: royalblue;
+    border-radius: 15pt;
+    color: whitesmoke;
+    box-shadow: -4px -2px 4px gray;
+    transition: 0.1s;
+}
+.contact a:hover {
+    background-color: whitesmoke;
+    color: royalblue;
+    transform: scale(1.1);
+}
+.carousel p {
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgba(255, 248, 211, 0.8);
+    font-weight: 800;
+    font-size: 75px;
+    position: absolute;
+    bottom: 50px;
+    -webkit-text-stroke: 3px rgba(12, 32, 99, 0.9);
+    text-transform: uppercase;
+}
+
+.row {
+    padding: 15px;
+}
+.card {
+    margin: 20px;
+}
+.card img {
+    max-height: 139px;
+    object-fit: cover;
+}
+.card img:hover {
+    object-fit: contain;
+    transform: scale(1.5);
+}
+
+.rezo {
+    position: relative;
+}
+
+.rezo li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    /* position: absolute; */
+    top: 0;
+}
+.rezo li {
+    width: 40px;
+    height: 38px;
+    transition: 0.3s;
+}
+#fb {
+    left: 0px;
+    background: 0 0/700% url(../img/sprite.png);
+}
+#tw {
+    left: 60px;
+    background: -40px 0/700% url(../img/sprite.png);
+}
+#yt {
+    left: 120px;
+    background: -80px 0/700% url(../img/sprite.png);
+}
+#ig {
+    left: 180px;
+    background: -120px 0/700% url(../img/sprite.png);
+}
+
+#fb:hover {
+    left: 0px;
+    background: 0 -40px/700% url(../img/sprite.png);
+}
+#tw:hover {
+    left: 60px;
+    background: -40px -40px/700% url(../img/sprite.png);
+}
+#yt:hover {
+    left: 120px;
+    background: -80px -40px/700% url(../img/sprite.png);
+}
+#ig:hover {
+    left: 180px;
+    background: -120px -40px/700% url(../img/sprite.png);
+}
+
+footer {
+    padding-top: 10px;
+}
+footer p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
