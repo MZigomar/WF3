@@ -19,7 +19,7 @@
     padding: 10px;
 }
 .container{
-    border: 2px solid;
+    border: 1px solid rgb(247, 247, 247);
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
 }
@@ -48,6 +48,9 @@
 .carousel-inner img{
     height: 550px;
     object-fit: cover;
+}
+#floatingTextarea{
+    height: 100px;
 }
 
 @media (min-width: 768px) {

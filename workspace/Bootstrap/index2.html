@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
@@ -7,33 +7,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./bootstrap/css/bootstrap.css" type="text/CSS">
     <link rel="stylesheet" href="./css/stylesheet.css" type="text/CSS">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"></script>
-    <title>Hello World</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <title>Hello world!</title>
 </head>
 
 <body>
-
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
             <a class="navbar-brand" href="#"><img src="https://www.warlegend.net/wp-content/uploads/diablo3-logo1.png"
                     alt="logo"></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
+                <ul class="navbar-nav ms-auto text-primary">
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="#">Home</a>
                     </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                            data-toggle="dropdown" aria-expanded="false">
+                            Coding
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="#">Full Stack JavaScript</a></li>
+                            <li><a class="dropdown-item" href="#">Python</a></li>
+                            <li><a class="dropdown-item" href="#">Artificial Intelligence</a></li>
+                            <li><a class="dropdown-item" href="#">Mobile Development</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                            data-toggle="dropdown" aria-expanded="false">
+                            Money
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="#">Real Life Projects</a></li>
+                            <li><a class="dropdown-item" href="#">Online Marketing</a></li>
+                            <li><a class="dropdown-item" href="#">Business & Ideas</a></li>
+                            <li><a class="dropdown-item" href="#">Stock Trading</a></li>
+                        </ul>
+                    </li>
+
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Features</a>
+                        <a class="nav-link" href="#">Blog</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Pricing</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled">Disabled</a>
+                        <a class="nav-link" href="#">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -72,10 +95,89 @@
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
         </button>
-    
-    
+    </div>
+    <div class="container pt-4">
+        <div class="row">
+            <div class="col-lg">
+                <h3 class="mb-4"> Hello ! </h3>
+                <img class="img-fluid"
+                    src="https://www.reference-gaming.com/assets/media/product/591/diablo-3-ps3-55a445255c7bc.jpg">
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere recusandae mollitia rem tenetur
+                    dicta
+                    soluta, maxime commodi incidunt error eaque neque unde cum voluptatibus aliquam? Mollitia magni
+                    dolorem
+                    pariatur repellendus!</p>
+            </div>
+            <div class="col-lg">
+                <h3 class="mb-4"> Hello ! </h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere recusandae mollitia rem tenetur
+                    dicta
+                    soluta, maxime commodi incidunt error eaque neque unde cum voluptatibus aliquam? Mollitia magni
+                    dolorem
+                    pariatur repellendus!</p>
+            </div>
+            <div class="col-lg">
+                <ul class="list-group">
+                    <li class="list-group-item">An item</li>
+                    <li class="list-group-item">A second item</li>
+                    <li class="list-group-item">A third item</li>
+                    <li class="list-group-item">A fourth item</li>
+                    <li class="list-group-item">And a fifth one</li>
+                    <li class="list-group-item">And a fifth one</li>
+                    <li class="list-group-item">And a fifth one</li>
+                    <li class="list-group-item">And a fifth one</li>
+                </ul>
+            </div>
+        </div>
     </div>
 
+
+    <div class="container">
+        <form id="contact_form">
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                    placeholder="Jolie dauphin">
+                <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputName" class="form-label">Name</label>
+                <input type="name" class="form-control" id="exampleInputName" placeholder="Your name">
+            </div>
+            <div class="mb-3">
+                <div class="form-floating">
+                    <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
+                    <label for="floatingTextarea">Comments</label>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+
+
+    <hr>
+    <div class="container">
+        <div class="row">
+            <div class="col-md">
+                <p><strong>Weekly newsletter</strong></p>
+                <p>I send one email every week about the projects I am working on and things that I am learning.
+                    Exclusive
+                    valuable content you won't find anywhere else. </p>
+            </div>
+            <div class="col-md col-lg-5 ms-auto">
+                <p><strong>Stay up-to-date on webforce3</strong></p>
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Ne mange pas le pneu"
+                        aria-label="Recipient's username" aria-describedby="button-addon2">
+                    <button class="btn btn-primary" type="button" id="button-addon2">Envoyer</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
@@ -85,11 +187,10 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
         integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
         crossorigin="anonymous"></script>
-
 </body>
 <!--       _
-       .__(.)< (MEOW)
-        \___)   
- ~~~~~~~~~~~~~~~~~~-->
+         .__(.)< (MEOW)
+          \___)   
+   ~~~~~~~~~~~~~~~~~~-->
 
 </html>
