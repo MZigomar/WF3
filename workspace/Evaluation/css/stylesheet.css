@@ -79,7 +79,7 @@ header{
 .header {
     width: 535px;
     flex-direction: column;
-    padding: 20px 20px 0px 20px;
+    padding: 20px 20px 10px 20px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -192,6 +192,9 @@ footer {
     padding: 30px 20px 10px 20px;
     width: 535px;
 }
+.footer{
+    padding: 0px 20px;
+}
 .icon {
     display: grid;
     border-bottom: 3px solid rgb(130, 130, 130);
@@ -221,8 +224,8 @@ footer {
 /* MEDIA ------------------------------------------ */
 /* ------------------------------------------ */
 
-/* Ici, je décide de mettre la taille minimum à 596 (575 + 21) pour prendre en compte la précense de à droite de la page sur PC. Sinon, c'est moche */
-@media (min-width: 596px) {
+/* Ici, je décide de mettre la taille minimum à 596 (575 + 20) pour prendre en compte la précense de à droite de la page sur PC. Sinon, c'est moche. Mais, cela ne change rien pour un écran de taille max 575px*/
+@media (min-width: 595px) {
     .wrap {
         width: 100%;
     }
