@@ -1,0 +1,288 @@
+@font-face {
+    font-family: "LiberationBold";
+    src: url(../fonts/LiberationSans-Bold-webfont.ttf) format("truetype");
+}
+@font-face {
+    font-family: "Liberation";
+    src: url(../fonts/LiberationSans-Regular-webfont.ttf) format("truetype");
+}
+.flex {
+    display: flex;
+}
+.grid {
+    display: grid;
+}
+body {
+    margin: 0px;
+}
+.wrap {
+    width: 575px;
+    margin: 0px auto;
+}
+a {
+    text-decoration: none;
+}
+.greybackground{
+    background-color: rgb(28, 28, 28);
+}
+.graybackground{
+    background-color: rgb(55, 55, 55);
+}
+
+.orange {
+    color: rgb(234, 159, 5);
+}
+.white {
+    color: rgb(255, 255, 255);
+}
+.libe {
+    font-family: Liberation;
+    font-weight: 400;
+}
+.libold {
+    font-family: LiberationBold;
+    font-weight: 700;
+}
+.font-10 {
+    font-size: 10px;
+}
+.font-12 {
+    font-size: 12px;
+}
+.font-14 {
+    font-size: 14px;
+}
+.font-18 {
+    font-size: 18px;
+}
+.font-22 {
+    font-size: 22px;
+}
+.font-24 {
+    font-size: 24px;
+}
+.crossed {
+    text-decoration: line-through;
+}
+.upper {
+    text-transform: uppercase;
+}
+.null {
+    opacity: 0;
+}
+
+/* HEADER START ------------------------------------------ */
+header{
+    background-image: url(../images/background.jpg);
+    width: 100%;
+}
+.header {
+    width: 535px;
+    flex-direction: column;
+    padding: 20px 20px 0px 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#logo {
+    flex-flow: column wrap;
+}
+#logo img,
+h1 {
+    margin: auto;
+    padding-top: 20px;
+}
+#navbar {
+    flex-flow: column wrap;
+}
+#navbar p {
+    margin-left: 37px;
+}
+
+header ul {
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+    flex-direction: row;
+    justify-content: space-around;
+}
+header a {
+    color: black;
+}
+/* HEADER END ------------------------------------------ */
+/* CORE START ------------------------------------------ */
+.container {
+    /* background-color: rgb(28, 28, 28); */
+    margin-top: 20px;
+    padding: 20px 20px 0px 20px;
+    width: 535px;
+}
+#banner {
+    height: 334px;
+}
+#banner img {
+    object-fit: cover;
+    height: 100%;
+    max-width: 100%;
+}
+section {
+    background-color: rgb(243, 243, 243);
+    padding-bottom: 150px;
+    flex-direction: column;
+}
+article {
+    flex-flow: column wrap;
+    justify-content: center;
+    padding: 20px;
+}
+article p,
+h2 {
+    margin: 0px;
+}
+
+.sold {
+    position: relative;
+    background-color: black;
+    padding: 4px 8px;
+    border-radius: 8px;
+    right: 40px;
+    margin-top: 10px;
+    height: 32px;
+}
+.pic {
+    align-self: flex-end;
+}
+.name {
+    /* background-color: white; */
+    margin: 0px;
+    align-self: center;
+    position: relative;
+    right: 30px;
+    bottom: 32px;
+}
+.price {
+    justify-content: center;
+}
+.price a {
+    background-color: black;
+    padding: 5px 50px;
+}
+.padding-20 {
+    padding: 0px 20px;
+}
+.contact {
+    background-color: white;
+    justify-content: space-evenly;
+    margin: 0px 20px;
+    border-radius: 8px;
+    position: relative;
+    top: 175px;
+    width: 495px;
+}
+.dot {
+    height: 14px;
+    width: 14px;
+    background-color: rgb(209, 209, 209);
+    border-radius: 50%;
+    margin: auto 0px;
+}
+/* CORE END ------------------------------------------ */
+/* FOOTER START ------------------------------------------ */
+footer {
+    text-align: center;
+    padding: 30px 20px 10px 20px;
+    width: 535px;
+}
+.icon {
+    display: grid;
+    border-bottom: 3px solid rgb(130, 130, 130);
+    margin-top: 20px;
+    padding-bottom: 20px;
+    grid-template-areas:
+        "book truck"
+        "lock thumb";
+}
+.icon div {
+    margin: 0px 15px;
+}
+.network {
+    justify-content: center;
+}
+.network img {
+    margin: 30px;
+}
+
+/* FOOTER END ------------------------------------------ */
+/* ------------------------------------------ */
+
+
+
+
+/* ------------------------------------------ */
+/* MEDIA ------------------------------------------ */
+/* ------------------------------------------ */
+
+/* Ici, je décide de mettre la taille minimum à 596 (575 + 21) pour prendre en compte la précense de à droite de la page sur PC. Sinon, c'est moche */
+@media (min-width: 596px) {
+    .wrap {
+        width: 100%;
+    }
+    /* HEADER START ------------------------------------------ */
+    .header {
+        width: 1030px;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .header p {
+        text-align: end;
+    }
+    .header a {
+        margin-left: 40px;
+    }
+    #logo h1 {
+        margin-left: 0px;
+    }
+    #navbar {
+        justify-content: space-between;
+    }
+    /* HEADER END ------------------------------------------ */
+
+    /* CORE START ------------------------------------------ */
+    .wrap{
+        width: 100%;
+    }
+    .container {
+        width: 1030px;
+        margin: 20px auto 0px auto;
+    }
+    section {
+        flex-flow: row wrap;
+        justify-content: flex-end;
+    }
+    section > h2 {
+        position: absolute;
+    }
+    .name {
+        /* background-color: white; */
+        margin: 0px;
+        justify-content: center;
+        position: relative;
+        bottom: 32px;
+    }
+    .price{
+        padding-right: 70px;
+    } 
+    .contact {
+        margin: 0px auto;
+    }
+    /* CORE END ------------------------------------------ */
+    /* FOOTER START ------------------------------------------ */
+    footer {
+        width: 990px;
+        margin: 0px auto;
+    }
+
+    .icon {
+        grid-template-areas: "book truck lock thumb";
+    }
+    /* FOOTER END ------------------------------------------ */
+}
