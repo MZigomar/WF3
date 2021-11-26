@@ -1,0 +1,46 @@
+.flex {
+    display: flex;
+}
+.container {
+    width: 80%;
+    margin: auto;
+    flex-direction: column;
+}
+.wrap {
+    flex-direction: column-reverse;
+}
+
+.wrap div {
+    height: 30vh;
+    width: 100%;
+}
+.gray {
+    background-color: rgb(184, 184, 184);
+}
+.white {
+    background-color: whitesmoke;
+}
+nav,
+h1 {
+    align-self: center;
+}
+nav ul li {
+    display: inline;
+    margin-right: 30px;
+}
+a{
+    text-decoration: none;
+}
+.disable {
+    pointer-events: none;
+    cursor: default;
+    color: black;
+}
+@media screen and (min-width: 576px) {
+    .wrap {
+        flex-flow: row wrap;
+    }
+    .wrap div {
+        width: 50%;
+    }
+}
