@@ -1,0 +1,22 @@
+.flex{
+    display: flex;
+}
+.cell{
+    margin: 0px;
+    padding: 0px;
+    height: 2px;
+    width: 2px;
+}
+.live{
+    background-color: limegreen;
+}
+.dead{
+    background-color: black;
+}
+
+
+
+html{
+    background-color: black;
+    color: limegreen;
+}
