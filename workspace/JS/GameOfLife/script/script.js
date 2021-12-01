@@ -99,4 +99,4 @@ for (let i = 0; i < repeat; i++) {
     setTimeout(function () { affiche(monde); simule(); }, speed * i);
 }
 
-			//console.log("voisin [1,1]="+voisins(1,1));
+//console.log("voisin [1,1]="+voisins(1,1));
