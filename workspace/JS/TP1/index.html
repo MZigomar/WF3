@@ -1,17 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TP1</title>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="assets/css/style.css" />
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet" />
+	<title>Liste des tâches</title>
 </head>
 
 <body>
-    <p>Hello World</p>
-</body>
+	<h1 id="title">List des tâches</h1>
+	<main id="taskList">
+	</main>
+	<div id="filterTask">
+		<p>Filtres</p>
+	</div>
+	<div id="addTask">
+		<p>+</p>
+	</div>
+	<section id="filterPopup" class="hidden">
+		<ul id="filterList">
+		</ul>
+	</section>
+	<section id="addPopup" class="hidden">
+		<h2>Ajouter une tâche</h2>
+		<form id="addPopup__form">
+			<select id="filterSelect">
+			</select>
+			<input type="text" id="filterText">
+			<button id="addPopup__form__cancel">Annuler</button>
+			<button id="addPopup__form__submit" type="submit">Ajouter</button>
+		</form>
+	</section>
 
-<script src="./script/script.js"></script>
+	<script src="assets/js/script.js"></script>
+
+</body>
 
 </html>

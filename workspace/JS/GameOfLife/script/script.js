@@ -2,7 +2,7 @@
 let ligne = 60;
 let colonne = 180;
 let taux = 20; // taux de cellule vivante au départ
-let speed = 100; //durée en ms entre chaque calcul
+let speed = 20; //durée en ms entre chaque calcul
 let repeat = 99999; // nombre de calcul
 
 let mondeAlea = function (nbLig, nbCol, taux) {
@@ -76,7 +76,7 @@ let evolution = function (vivante, nbVoisins) {
         else
             return 0;
     else
-        if (nbVoisins == 2 || nbVoisins == 3)
+        if (nbVoisins == 2 || nbVoisins == 3 )
             return 1;
 
         else
