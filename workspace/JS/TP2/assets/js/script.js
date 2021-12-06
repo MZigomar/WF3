@@ -1,32 +1,34 @@
-const htmlSections = document.getElementsByTagName("section");
-const sections = [].slice.call(htmlSections);
-
+// Get all sections
+const sections = Array.from(document.getElementById("content").children);
 // Get all "li"
-const controller = document.getElementById("controller").childNodes;
-const lis = [];
-controller.forEach(e => {
-    e.tagName=="LI" ? lis.push(e) : console.log(); ;
-});
+const liArray = Array.from(document.getElementById("controller").children)
+/**
+ * Add d-none class 
+ * @returns void
+ */
+const hide = () => sections.forEach(e => e.classList.add("d-none"));
+/**
+ * Remove the select class
+ * @returns void
+ */
+const unselect = () => liArray.forEach(e => e.classList.remove("select"));
 
-// add d-none class
-const hide = () => sections.forEach(e => {
-    e.classList.add("d-none");
-});
-// remove select class
-const unselect = () => {
-    lis.forEach(e => {
-        e.classList.remove("select")
-    });
-}
 
 // add onclick event on all 
-lis.forEach(e => {
+liArray.forEach(e => {
     e.onclick = () => {
         hide();
         unselect();
-        sections[e.attributes[0].value-1].classList.remove("d-none");
+        // getAttribute return the attribute value
+        sections[e.getAttribute('tabs')-1].classList.remove("d-none");
         e.classList.add("select");
     };
 });
 
-hide();
+const init = () => {
+    hide();
+    sections[0].classList.remove("d-none");
+    liArray[0].classList.add("select");
+}
+
+init();
