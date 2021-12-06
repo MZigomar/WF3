@@ -1,0 +1,44 @@
+main {
+	width: 100%;
+	height: 80vh;
+	margin-top: 10vh;
+}
+
+#controller {
+	width: 100%;
+	height: 10%;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	list-style: none;
+	border-bottom: 1px solid black;
+}
+
+#controller li {
+	flex: 1;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+}
+
+#controller li:hover {
+	background: rgba(0, 0, 0, 0.267);
+}
+
+#controller .select {
+	background: rgba(0, 0, 0, 0.267);
+}
+
+#content {
+	width: 100%;
+	height: 90%;
+}
+
+.d-none {
+	display: none;
+}
