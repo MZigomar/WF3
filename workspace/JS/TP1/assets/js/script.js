@@ -41,7 +41,6 @@ const cat = document.getElementById("filterSelect");
 const text = document.getElementById("filterText");
 
 
-
 const changeVisibility = (id) => id.classList.contains("hidden") ? id.classList.remove("hidden") : id.classList.add("hidden");
 
 filter.onclick = () => changeVisibility(filterPopup);

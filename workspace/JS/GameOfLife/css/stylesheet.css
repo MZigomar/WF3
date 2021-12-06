@@ -1,22 +1,25 @@
-.flex{
+.flex {
     display: flex;
+    flex-flow: row wrap;
 }
-.cell{
+.cell {
     margin: 0px;
     padding: 0px;
-    height: 2px;
-    width: 2px;
+    height: 8px;
+    width: 8px;
 }
-.live{
+.live {
     background-color: limegreen;
 }
-.dead{
+.dead {
     background-color: black;
 }
 
+canvas {
+    border: 1px solid lime;
+}
 
-
-html{
+html {
     background-color: black;
     color: limegreen;
 }

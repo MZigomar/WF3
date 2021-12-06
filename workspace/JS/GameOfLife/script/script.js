@@ -1,9 +1,12 @@
+const screen = document.getElementById("output");
 
-let ligne = 60;
-let colonne = 180;
+let canvas = document.getElementById('world');
+
+let ligne = 45;
+let colonne = 50;
 let taux = 20; // taux de cellule vivante au départ
-let speed = 20; //durée en ms entre chaque calcul
-let repeat = 99999; // nombre de calcul
+let speed = 100; //durée en ms entre chaque calcul
+let repeat = 9000; // nombre de calcul
 
 let mondeAlea = function (nbLig, nbCol, taux) {
     let x = new Array(nbLig);
@@ -46,7 +49,7 @@ let affiche = function (m) {
     for (let idxL = 0; idxL < m.length; idxL++) {
         let ligne = "";
         for (let idxC = 0; idxC < m[0].length; idxC++) {
-            ligne += (m[idxL][idxC] === 0 ? '.' : '●');
+            ligne += (m[idxL][idxC] === 0 ? '. ' : '● ');
         }
         let node = document.createTextNode(ligne);
         screen.appendChild(node);
@@ -55,6 +58,60 @@ let affiche = function (m) {
     }
 }
 
+// const affiche = function (m) {
+//     screen.innerHTML = '';
+//     for (let idxL = 0; idxL < m.length; idxL++) {
+//         let div = document.createElement('div')
+//         div.setAttribute("id", "ligne"+idxL);
+//         div.className = "flex"
+//         screen.appendChild(div)
+
+//         console.log(div);
+
+//         for (let idxC = 0; idxC < m[0].length; idxC++) {
+//             let ligne = document.getElementById("ligne"+idxL);
+//             let node = document.createElement('div'); 
+//             (m[idxL][idxC] === 0 ? node.className = "dead cell" : node.className = "live cell" );
+//             ligne.appendChild(node);
+
+//         }
+//     }
+// }
+// function affiche(m) {
+
+//     if (canvas.getContext) {
+
+//         let ctx = canvas.getContext('2d');
+
+//         for (let idxL = 0; idxL < m.length; idxL++) {
+//             for (let idxC = 0; idxC < m[idxL].length; idxC++) {
+
+//                 if (m[idxL][idxC] === 0) {
+
+//                     console.log("if");
+//                     console.log(idxL * 4+" "+ idxC * 4);
+
+//                     ctx.fillStyle = 'limegreen';
+//                     ctx.fillRect(idxL * 4, idxL * 4, 4, 2);
+
+//                 } else {
+                                        
+//                     console.log("else");
+//                     console.log(idxL * 4+" "+ idxC * 4);
+
+//                     ctx.fillStyle = 'grey';
+//                     ctx.fillRect(idxL * 4, idxL * 4, 4, 2);
+
+//                 }
+//             }
+//         }
+//     }
+// }
+
+// function draw() {
+//     canvas.style.height = colonne * 4 + "px";
+//     canvas.style.width = ligne * 4 + "px";
+// }
 // calcul le nombre de cellules vivantes autour de la cellule de coordonnées (lig, col)
 let voisins = function (lig, col) {
     let n = 0;
@@ -76,7 +133,7 @@ let evolution = function (vivante, nbVoisins) {
         else
             return 0;
     else
-        if (nbVoisins == 2 || nbVoisins == 3 )
+        if (nbVoisins == 2 || nbVoisins == 3)
             return 1;
 
         else
