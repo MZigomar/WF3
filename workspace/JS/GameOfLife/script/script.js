@@ -2,11 +2,11 @@ const screen = document.getElementById("output");
 
 let canvas = document.getElementById('world');
 
-let ligne = 45;
+let ligne = 50;
 let colonne = 50;
 let taux = 20; // taux de cellule vivante au départ
 let speed = 100; //durée en ms entre chaque calcul
-let repeat = 9000; // nombre de calcul
+let repeat = 1; // nombre de calcul
 
 let mondeAlea = function (nbLig, nbCol, taux) {
     let x = new Array(nbLig);
@@ -48,8 +48,22 @@ let affiche = function (m) {
     screen.innerHTML = '';
     for (let idxL = 0; idxL < m.length; idxL++) {
         let ligne = "";
+        let shift = 23;
+        let rad = 21;
+        // for (let idxC = 0; idxC < m[0].length; idxC++) {
+        //     ligne += (m[idxL][idxC] === 0 ? '. ' : '● ');
+        // }
         for (let idxC = 0; idxC < m[0].length; idxC++) {
-            ligne += (m[idxL][idxC] === 0 ? '. ' : '● ');
+            if (
+                (idxL-shift)*(idxL-shift)  + (idxC-shift)*(idxC-shift) < rad*rad
+                && (idxC > 18 || idxC < 12)
+                && (idxL > 33 || idxL < 30)
+            )
+
+                ligne += '● ';
+            else
+                ligne += '. ';
+
         }
         let node = document.createTextNode(ligne);
         screen.appendChild(node);
@@ -95,7 +109,7 @@ let affiche = function (m) {
 //                     ctx.fillRect(idxL * 4, idxL * 4, 4, 2);
 
 //                 } else {
-                                        
+
 //                     console.log("else");
 //                     console.log(idxL * 4+" "+ idxC * 4);
 
