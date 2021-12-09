@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VroumForce4</title>
+
+    <link rel="stylesheet" href="./assets/css/stylesheet.css">
+</head>
+
+<body>
+    <div id="wrap" class="flex">
+
+        <header>
+
+            <div id="header" class="flex">
+                <div id="title">
+                    <h1>Bienvenue à bord</h1>
+                    <p>Location de voiture 24h/24 et 7j/7</p>
+                </div>
+
+                <form id="headerForm">
+                    <select name="agency" id="agencyList">
+                        <option value="none" disabled selected>Adresse de départ</option>
+                        <option value="all">Toutes les agences</option>
+                        <option value="Lille">Agence 1, 59000 Lille</option>
+                        <option value="Paris">Agence 2, 75075 Paris</option>
+                        <option value="Ville">Agence 3, 89632 Ville</option>
+                    </select>
+
+                    <input type="date" id="startDate" placeholder="Début de location">
+
+                    <input type="date" id="endDate" placeholder="Fin de location">
+
+                    <button id="submitBtn" type="submit">Valider ma recherche</button>
+                </form>
+            </div>
+
+            <nav id="navbar">
+                <ul id="navbarUl" class="d-none">
+                    <li><a href="#">Louer une voiture</a></li>
+                    <li><a href="#">Louer un utilitaire</a></li>
+                    <li><a href="#">Réserver un chauffeur</a></li>
+                    <li><a href="#">Découvrez nos agences</a></li>
+                    <li><a href="#">Mon compte</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+
+        </header>
+
+        <main class="flex">
+
+            <div id="mainHead" class="flex">
+                <p><span id="resultNum" class="bold">0</span> résultat<span id="resultS" class="d-none">s</span> </p>
+                <select name="sortMenu" id="sortMenu">
+                    <option value="sortInc">Prix croissant</option>
+                    <option value="sortDec">Prix décroissant</option>
+                </select>
+            </div>
+            <div id="resultList" class="flex column">
+
+            </div>
+
+        </main>
+
+
+
+
+        <footer class="flex">
+            <div id="agence">
+                <img src="./Img/agence.jpg" alt="agence">
+            </div>
+            <div id="contact">
+                <p>Notre Agence de <span class="bold">Paris</span></p>
+                <p>300 boulevard de Vaugirard, 75015, Paris</p>
+                <p>Ouvert 7j/7 de 09h à 13h et de 14h à 20h</p>
+                <p>01 49 78 21 33 </p>
+                <p>contact@vtc.com</p>
+            </div>
+        </footer>
+
+    </div>
+
+
+    <script src="./assets/js/script.js"></script>
+</body>
+
+</html>
