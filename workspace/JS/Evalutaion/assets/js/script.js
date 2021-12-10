@@ -103,8 +103,6 @@ const changePic = (plusIndex, slideIdx) => {
 const showSlide = (plusIndex, slideIdx) => {
     let i;
     let x = document.getElementsByClassName(slideId[slideIdx]);
-
-    console.log(slideIdx);
     if (plusIndex > x.length)
         slideIndex[slideIdx] = 1
     if (plusIndex < 1)
@@ -226,9 +224,6 @@ const showResult = (agency, sort) => {
 
         showSlide(1, i);
     }
-
-    console.log(slideIndex);
-    console.log(slideId);
 };
 
 //affiche les résultats manquant sur le scroll
@@ -244,6 +239,7 @@ document.onscroll = () => {
 
 //Detexte le changement d'etat et rappelle la fonction principale selon le choix du tri
 sortMenu.onchange = () => {
+    if(selectedAgency != "")
     showResult(selectedAgency, sortMenu.value)
 }
 
