@@ -91,19 +91,29 @@ const changeVisibility = (id) => {
 };
 
 
-let slideIndex = 0;
+let slideIndex = [];
+let slideId = [];
 /**
  * change de slide en avant ou en arrière en fonction du parametre 1 ou -1
  * @param {plusIndex}  
  */
-const changePic = (plusIndex) => {
-    showSlide(slideIndex + plusIndex);
+const changePic = (plusIndex, slideIdx) => {
+    showSlide(slideIndex[slideIdx] += plusIndex, slideIdx);
 }
-const showSlide = (i) => {
-    let picList = Array.from(document.getElementsByClassName("imgDiv"));
-    console.log(picList);
+const showSlide = (plusIndex, slideIdx) => {
+    let i;
+    let x = document.getElementsByClassName(slideId[slideIdx]);
+
+    console.log(slideIdx);
+    if (plusIndex > x.length)
+        slideIndex[slideIdx] = 1
+    if (plusIndex < 1)
+        slideIndex[slideIdx] = x.length
+    for (i = 0; i < x.length; i++) {
+        x[i].classList.add("d-none");
+    }
+    x[slideIndex[slideIdx]-1].classList.remove("d-none");
 }
-// CARROUSEL PAS FINI NON FONCTIONNEL
 
 
 
@@ -117,6 +127,8 @@ let selectedAgency = "";
 const showResult = (agency, sort) => {
     resultList.innerHTML = "";
     sortedCarList = [];
+    slideIndex = [];
+    slideId = [];
 
     carList.forEach(e => {
         if (e.agency == agency || agency == "all" || (e.agency == "" && agency != "none"))
@@ -133,6 +145,9 @@ const showResult = (agency, sort) => {
 
     for (let i = 0; i < sortedCarList.length; i++) {
 
+        slideIndex.push(1);
+        slideId.push("pic" + i);
+
         //création de la div du résultat
         let node = document.createElement("DIV");
         node.classList.add("result", "flex");
@@ -140,28 +155,35 @@ const showResult = (agency, sort) => {
 
         //creation de la div qui contient l'image et ajout de l'image
 
-        //prev btn
-        let prev = document.createElement("DIV");
-        prev.classList.add("prev");
-        prev.onclick = () => changePic(-1);
-        prev.innerHTML = '<p>&#10094;</p>';
-
         //slideDiv
         let slideDiv = document.createElement("DIV");
         slideDiv.classList.add("slideDiv");
 
+        //prev btn
+        let prev = document.createElement("DIV");
+        prev.classList.add("prev");
+        prev.onclick = () => changePic(-1, i);
+        prev.innerHTML = '<p>&#10094;</p>';
+
         //next btn
         let next = document.createElement("DIV");
         next.classList.add("next");
-        next.onclick = () => changePic(1);
+        next.onclick = () => changePic(1, i);
         next.innerHTML = '<p>&#10095;</p>';
 
         //img de base
-        let img = document.createElement("IMG");
-        img.src = sortedCarList[i].img[0];
+        let imgList = sortedCarList[i].img
+
         let imgDiv = document.createElement("DIV");
-        imgDiv.classList.add("imgDiv")
-        imgDiv.appendChild(img);
+        imgDiv.classList.add("imgDiv");
+
+        imgList.forEach(e => {
+            let img = document.createElement("IMG");
+            img.src = e;
+            img.classList.add("pic" + i);
+            imgDiv.appendChild(img);
+        });
+
 
 
         //append dens l'ordre d'apparition
@@ -183,14 +205,14 @@ const showResult = (agency, sort) => {
         let description = document.createElement("P");
         description.innerHTML = `${sortedCarList[i].description}`
         let price = document.createElement("P");
-        sortedCarList[i].agency != "" ? 
-        price.innerHTML = `\n${sortedCarList[i].price} € - ${sortedCarList[i].agency}` :
-        price.innerHTML = `\n${sortedCarList[i].price} €`;
+        sortedCarList[i].agency != "" ?
+            price.innerHTML = `\n${sortedCarList[i].price} € - ${sortedCarList[i].agency}` :
+            price.innerHTML = `\n${sortedCarList[i].price} €`;
 
 
-        
+
         let info = document.createElement("DIV");
-        
+
         info.appendChild(name);
         info.appendChild(description);
         info.appendChild(price);
@@ -200,7 +222,13 @@ const showResult = (agency, sort) => {
 
         resultList.appendChild(node);
         document.getElementById("resultNum").innerHTML = i + 1;
+
+
+        showSlide(1, i);
     }
+
+    console.log(slideIndex);
+    console.log(slideId);
 };
 
 //affiche les résultats manquant sur le scroll
@@ -214,7 +242,7 @@ document.onscroll = () => {
 }
 
 
-//Detexte le changement d'etat et change le sens du flex selon le choix du tri
+//Detexte le changement d'etat et rappelle la fonction principale selon le choix du tri
 sortMenu.onchange = () => {
     showResult(selectedAgency, sortMenu.value)
 }
