@@ -75,9 +75,9 @@ const carList = [
             "Img/vehicule7.png",
             "Img/vehicule7bis.png"
         ],
-        description: "Kérosène, 16 portes, GPS, Parachutes, Forfait 10000km (30/km supplémentaire).",
+        description: "Kérosène, 16 portes, Parachutes, Forfait 10000km (30/km supplémentaire).",
         price: 680000,
-        agency: ""
+        agency: "Ville"
     }
 ];
 
@@ -110,7 +110,7 @@ const showSlide = (plusIndex, slideIdx) => {
     for (i = 0; i < x.length; i++) {
         x[i].classList.add("d-none");
     }
-    x[slideIndex[slideIdx]-1].classList.remove("d-none");
+    x[slideIndex[slideIdx] - 1].classList.remove("d-none");
 }
 
 
@@ -150,6 +150,14 @@ const showResult = (agency, sort) => {
         let node = document.createElement("DIV");
         node.classList.add("result", "flex");
         if (i >= 4) node.classList.add("d-none");
+
+
+        //ajout du "s" à résultats quand plus de 1 résultat
+        if (i > 0)
+            document.getElementById("resultS").classList.remove("d-none")
+        else
+            document.getElementById("resultS").classList.add("d-none")
+
 
         //creation de la div qui contient l'image et ajout de l'image
 
@@ -204,7 +212,7 @@ const showResult = (agency, sort) => {
         description.innerHTML = `${sortedCarList[i].description}`
         let price = document.createElement("P");
         sortedCarList[i].agency != "" ?
-            price.innerHTML = `\n${sortedCarList[i].price} € - ${sortedCarList[i].agency}` :
+            price.innerHTML = `\n${sortedCarList[i].price} € - Agence de ${sortedCarList[i].agency}` :
             price.innerHTML = `\n${sortedCarList[i].price} €`;
 
 
@@ -239,8 +247,8 @@ document.onscroll = () => {
 
 //Detexte le changement d'etat et rappelle la fonction principale selon le choix du tri
 sortMenu.onchange = () => {
-    if(selectedAgency != "")
-    showResult(selectedAgency, sortMenu.value)
+    if (selectedAgency != "")
+        showResult(selectedAgency, sortMenu.value)
 }
 
 
@@ -269,8 +277,9 @@ let i = 0;
 //carrousel du header
 const carrousel = () => {
     //je me permets d'utiliser le tagname parce que dans tous les cas, j'aurais toujours un seul header
-    document.getElementsByTagName("HEADER")[0].style.background = "url(" + backgroundList[i] + ")";
+    document.getElementsByTagName("HEADER")[0].style.background = `url(${backgroundList[i]})`;
     document.getElementsByTagName("HEADER")[0].style.backgroundSize = "cover";
+    document.getElementsByTagName("HEADER")[0].style.backgroundPositionY = "center";
     if (i < backgroundList.length - 1) {
         i++;
     } else {
