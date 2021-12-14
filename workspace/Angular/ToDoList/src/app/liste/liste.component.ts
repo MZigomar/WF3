@@ -18,8 +18,8 @@ export class ListeComponent implements OnInit {
     new Task("PHP","Apprendre Backend"),
   ];
 
-  addTask() {
-    this.taskList.push(new Task('Tache 1', 'Description'));
+  addTask(n:string, d:string) {
+    this.taskList.push(new Task(n, d));
     console.log(this.taskList);
   }
   removeTask(index: number) {
