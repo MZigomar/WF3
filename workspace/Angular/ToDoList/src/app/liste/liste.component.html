@@ -1,0 +1,18 @@
+<h1>{{title}}</h1>
+
+<input [(ngModel)]="task.name" type="text">
+
+<button (click)="addTask()">Add</button>
+<hr>
+<ul id="liste" *ngFor="let t of taskList; let i = index">
+
+    <li>
+        <span>Tache n°</span>{{i+1}}
+        <span>: {{taskList[i].getName()}}</span>
+        <span> >> {{taskList[i].getDescription()}} </span>
+        <button (click)="removeTask(i)">Remove</button>
+    </li>
+
+
+</ul>
+
