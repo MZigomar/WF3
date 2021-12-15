@@ -1,7 +1,7 @@
 <h1>{{title}}</h1>
 
-<input [(ngModel)]="taskName" type="text" placeholder="Nom de la tache" value="">
-<input [(ngModel)]="taskDesc" type="text" placeholder="Description" value="">
+<input [(ngModel)]="taskName" type="text" placeholder="Nom de la tache" value=""  (keyup.enter)="onKey()">
+<input [(ngModel)]="taskDesc" type="text" placeholder="Description" value="" (keyup.enter)="onKey()">
 
 <button (click)="addTask()">Add</button>
 <hr>

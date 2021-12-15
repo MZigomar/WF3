@@ -29,6 +29,9 @@ export class ListeComponent implements OnInit {
       this.taskDesc = '';
     }
   }
+  onKey() { // without type info
+    this.addTask();
+  }
 
   removeTask(index: number) {
     if (index > -1) {
