@@ -1,11 +1,11 @@
 export class Task {
-  public name: string = '';
-  public description: string = '';
+  private name: string = '';
+  private description: string = '';
 
-constructor(name: string, description: string){
+  constructor(name: string, description: string) {
     this.name = name;
-    this.description = description;
-}
+    if (description != '') this.description = '>>> ' + description;
+  }
 
   setName(name: string) {
     this.name = name;

@@ -13,19 +13,27 @@ export class ListeComponent implements OnInit {
 
   title: string = 'To Do List';
   taskList: Task[] = [
-    new Task("Java","Faire la POO"),
-    new Task("Symphny","Découverte"),
-    new Task("PHP","Apprendre Backend"),
+    new Task('Java', 'Faire la POO/COO'),
+    new Task('Symphony', 'Découverte totale'),
+    new Task('PHP', 'Apprendre à developper le Backend'),
   ];
 
-  addTask(n:string, d:string) {
-    this.taskList.push(new Task(n, d));
-    console.log(this.taskList);
+  taskName: string = '';
+  taskDesc: string = '';
+
+  addTask() {
+    if (this.taskName != '') {
+      this.taskList.push(new Task(this.taskName, this.taskDesc));
+      console.log(this.taskList);
+      this.taskName = '';
+      this.taskDesc = '';
+    }
   }
+
   removeTask(index: number) {
     if (index > -1) {
       this.taskList.splice(index, 1);
-      console.log("Remove task "+index);
+      console.log('Remove task ' + index);
     }
   }
 }
