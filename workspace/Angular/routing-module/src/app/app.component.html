@@ -1,6 +1,19 @@
-<app-comp-aa></app-comp-aa>
-<app-comp-ab></app-comp-ab>
-<app-comp-ba></app-comp-ba>
-<app-comp-bb></app-comp-bb>
-<app-comp-ca></app-comp-ca>
-<app-comp-cb></app-comp-cb>
+<h1>Modules et Routing</h1>
+<nav>
+  <ul>
+    <li>
+      <a [routerLink]="['app-comp-aa']">Route to comp-aa</a>
+    </li>
+    <li>
+      <a [routerLink]="['app-comp-ab']">Route to comp-ab</a>
+    </li>
+    <li>
+      <a [routerLink]="['app-comp-ba']">Route to comp-ba</a>
+    </li>
+    <li>
+      <a [routerLink]="['app-comp-bb']">Route to comp-bb</a>
+    </li>
+  </ul>
+</nav>
+
+<router-outlet></router-outlet>

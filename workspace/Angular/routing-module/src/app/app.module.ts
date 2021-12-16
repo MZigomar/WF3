@@ -14,7 +14,7 @@ import { ModuleCModule } from './modules/module-c/module-c.module';
     AppRoutingModule,
     ModuleAModule,
     ModuleBModule,
-    ModuleCModule
+    ModuleCModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

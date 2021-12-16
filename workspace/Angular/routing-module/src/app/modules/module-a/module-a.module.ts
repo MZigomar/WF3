@@ -5,7 +5,6 @@ import { CompAbComponent } from './comp-ab/comp-ab.component';
 
 @NgModule({
   declarations: [CompAaComponent, CompAbComponent],
-  imports: [CommonModule],
-  exports: [CompAaComponent, CompAbComponent]
+  imports: [CommonModule]
 })
 export class ModuleAModule {}

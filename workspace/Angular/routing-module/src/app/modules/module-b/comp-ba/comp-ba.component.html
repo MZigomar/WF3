@@ -1,1 +1,8 @@
-<p>comp-ba works!</p>
+
+<div *ngFor="let j of jSonContent; index as i">
+
+    <h2>User #{{j.userId}}</h2>
+    <h3>{{j.title}}</h3>
+    <p>Post {{j.id}} - {{j.body}}</p>
+    <hr>
+<div>
