@@ -18,6 +18,5 @@ export class CompBaComponent implements OnInit {
       .subscribe((data) => {
         this.jSonContent = data;
       });
-  }
-
+    }
 }
