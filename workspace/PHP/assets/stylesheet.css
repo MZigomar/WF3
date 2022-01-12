@@ -1,0 +1,95 @@
+.xdebug-var-dump{
+    color: limegreen;
+}
+html{
+    background: rgb(10, 10, 10);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.flex{
+    display: flex;
+}
+.back{
+font-size: 16px;
+    text-decoration: none;
+    background: whitesmoke;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    color: rgb(70, 70, 70);
+    transition: 0.2s;
+}
+.back:hover{
+    color: whitesmoke;
+    background: rgb(70, 70, 70);
+}
+
+h2{
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 26;
+    text-align: center;
+}
+
+ul{
+    flex-direction: column-reverse;
+
+    padding: 0;
+}
+li{
+    background: gray;
+    width: 70%;
+    margin: 1rem auto;
+    padding: 1rem 4rem;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 1rem;
+    color: white;
+}
+li a{
+    text-decoration: none;
+    background: whitesmoke;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    color: rgb(70, 70, 70);
+    transition: 0.2s;
+}
+li a:hover{
+    color: whitesmoke;
+    background: rgb(70, 70, 70);
+}
+
+.add{
+    background: rgb(70, 70, 70);
+    font-size: 16px;
+    width: 70%;
+    margin: 1rem auto;
+    padding: 1rem 4rem;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 1rem;
+    color: white;
+}
+
+.add button{
+    background: whitesmoke;
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+}
+
+.delete{
+    margin: 0;
+}
+
+.delete input, .delete button{    
+    background: whitesmoke;
+    font-weight: bold;
+    margin-left: 1rem;
+    padding: 0.2rem 0.7rem;
+    font-size: 24px;
+}
+.delete input:hover, .delete button:hover{
+    color: whitesmoke;
+    background: rgb(70, 70, 70);
+}
