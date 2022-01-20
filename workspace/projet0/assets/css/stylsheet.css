@@ -1,0 +1,31 @@
+.xdebug-var-dump{
+    color: limegreen;
+}
+
+html{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background: rgb(10, 10, 10);
+}
+.flex{
+    display: flex;
+}
+
+.listUsers{
+    flex-direction: column-reverse;
+    padding: 0;
+    width: 75%;
+    margin: 0 auto;
+}
+.user{
+    margin-bottom: 1rem;
+    list-style-type: none;
+    background-color: black;
+    border: rgb(188, 135, 2) 1px solid;
+    border-radius: 1rem;
+    color: rgb(115, 155, 255);
+    justify-content: space-between;
+    padding: 1rem 2rem;
+} 
+.surnom{
+    font-weight: bold;
+}
