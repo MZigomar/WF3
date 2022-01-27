@@ -1,0 +1,51 @@
+html{
+	background-color: black;
+	color: blanchedalmond;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1 {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.ticTacToe {
+	width: 30rem;
+	height: 30rem;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: 10px;
+	background: blanchedalmond;
+}
+
+.ticTacToe div {
+	min-width: 1rem;
+	min-height: 1rem;
+	position: relative;
+	background: rgb(0, 0, 0);
+}
+
+.ticTacToe__case {
+	margin: 0;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 3rem;
+	color: rgb(0, 255, 128);
+}
+.ticTacToe div:hover {
+	background-color: rgb(24, 24, 20);
+}
+
+#message {
+	position: absolute;
+	left: 50%;
+	bottom: 0;
+	transform: translateX(-50%);
+}
