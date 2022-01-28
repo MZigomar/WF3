@@ -1,0 +1,145 @@
+html {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    margin: 0;
+}
+
+nav {
+    width: 100%;
+    margin: 0;
+}
+
+nav ul {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    width: 50%;
+    list-style-type: none;
+}
+
+nav ul li a {
+    padding: 2.5rem;
+    background-color: rgb(212, 212, 212);
+    border: rgb(184, 184, 184) 1px solid;
+    color: black;
+    text-decoration: none;
+    font-size: 22px;
+    justify-content: center;
+    transition: 0.5s;
+}
+
+nav ul li a:hover {
+    background-color: rgb(96, 221, 96);
+}
+
+.active {
+    background-color: rgb(169, 224, 169);
+}
+
+header {
+    margin-top: 3rem;
+}
+
+h1 {
+    text-align: center;
+    color: rgb(71, 71, 71);
+}
+
+.flex {
+    display: flex;
+}
+
+.listAdverts {
+    /* flex-direction: column-reverse; */
+    flex-direction: column;
+    padding: 0;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.advert {
+    margin-bottom: 1rem;
+    list-style-type: none;
+    background-color: rgb(102, 102, 102);
+    border-radius: 1rem;
+    color: rgb(255, 255, 255);
+    padding: 1rem 2rem;
+}
+
+.title {
+    justify-content: space-between;
+    font-weight: 700;
+}
+
+.listHead {
+    margin-bottom: 0.5rem;
+    list-style-type: none;
+    background-color: rgb(78, 78, 78);
+    border-radius: 1rem 1rem 0 0;
+    color: rgb(255, 255, 255);
+    padding: 0.5rem 2rem;
+}
+
+.listFoot {
+    margin-top: 0;
+    margin-bottom: 2rem;
+    list-style-type: none;
+    background-color: rgb(78, 78, 78);
+    border-radius: 0 0 1rem 1rem;
+    color: rgb(255, 255, 255);
+    padding: 0.5rem 2rem;
+    min-height: 1rem;
+}
+
+.detail{
+    text-decoration: none;
+    background: whitesmoke;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    color: rgb(70, 70, 70);
+    transition: 0.2s;
+}
+.detail:hover{
+    color: whitesmoke;
+    background: rgb(70, 70, 70);
+}
+
+/* Formulaire */
+
+.add {
+    flex-direction: column;
+    background-color: rgb(102, 102, 102);
+    color: rgb(255, 255, 255);
+    text-align: center;
+    width: 60%;
+    margin: 0 auto;
+    border-radius: 2rem;
+    padding-top: 1rem;
+}
+.add div{
+    padding: 0.5rem;
+    font-size: 18px;
+}
+
+.add button {
+    font-size: 18px;
+    margin-top: 1rem;
+    background: whitesmoke;
+    padding: 2rem 1rem;
+    font-weight: bold;
+    border-radius: 0 0 2rem 2rem;
+    transition: 0.2s;
+}
+
+.add button:hover {
+    background-color: rgb(120, 160, 255);
+}
+
+.add button:active {
+    background-color: rgb(150, 190, 255);
+}
