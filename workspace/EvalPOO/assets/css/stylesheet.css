@@ -1,0 +1,85 @@
+html {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+body{
+    margin: 0;
+}
+.flex {
+    display: flex;
+}
+h1, h2 {
+    text-align: center;
+}
+
+.tableContainer {
+    margin: 2rem;
+}
+
+th {
+    padding: 0.5rem 2rem;
+}
+
+.head {
+    background-color: rgb(219, 219, 255);
+}
+.none {
+    color: rgb(141, 141, 141);
+    background-color: rgb(233, 233, 233);
+}
+
+tr {
+    background-color: rgb(240, 240, 255);
+}
+
+
+/* NAV */
+
+nav {
+    width: 100%;
+    margin: 0;
+}
+
+nav ul {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    width: 50%;
+    list-style-type: none;
+}
+
+nav ul li a {
+    padding: 2.5rem;
+    background-color: rgb(212, 212, 212);
+    border: rgb(184, 184, 184) 1px solid;
+    color: black;
+    text-decoration: none;
+    font-size: 22px;
+    justify-content: center;
+    transition: 0.5s;
+}
+
+nav ul li a:hover {
+    background-color: rgb(96, 221, 96);
+}
+
+/* FORM */
+
+.add{
+    background: rgb(219, 219, 255);
+    font-size: 16px;
+    width: 70%;
+    margin: 1rem auto;
+    padding: 1rem 4rem;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 1rem;
+}
+
+.add button{
+    background: rgb(240, 240, 255);
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+}
