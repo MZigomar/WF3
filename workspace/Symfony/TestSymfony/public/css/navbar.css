@@ -1,0 +1,33 @@
+#navbar {
+    margin: 0;
+    justify-content: space-between;
+    background-color: #333;
+}
+
+#navbar ul {
+    overflow: hidden;
+    min-height: 3rem;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+#navbar li {
+    list-style-type: none;
+    margin: 0 0.5rem;
+}
+
+#navbar .link {
+    text-decoration: none;
+    font-weight: bold;
+    padding: 1.5rem 2rem;
+    transition: 0.3s;
+    color: white;
+}
+
+#navbar a:hover:not(.active) {
+    background-color: #111;
+}
+.active {
+    background-color: #04AA6D;
+}

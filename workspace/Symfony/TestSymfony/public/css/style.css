@@ -1,0 +1,11 @@
+body {
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #181a1b ;
+    color: rgb(226 223 219);
+}
+
+.d-flex {
+    display: flex;
+}
+
